@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox example </title>
+
+    <style>
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+            /* display: grid;
+      grid-template-columns: repeat(2, 1fr) 6fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px; */
+        }
+
+        .col {
+            flex: 1;
+            /* width: 100px; */
+            margin-right: 5px;
+        }
+
+        .col:last-child {
+            margin-right: 0px;
+        }
+
+        .col-4 {
+            flex: 2;
+            /* width: 300px; */
+        }
+
+        .card {
+            min-height: 100px;
+            width: 100%;
+            background: lightblue;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .row {
+                flex-direction: column;
+            }
+
+            .col {
+                margin-right: 0px;
+                margin-bottom: 5px;
+            }
+            /* .row {
+        grid-template-columns: 1fr;
+      } */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col col-2">
+                <div class="card">A</div>
+            </div>
+            <div class="col col-2">
+                <div class="card">B</div>
+            </div>
+            <div class="col col-4">
+                <div class="card">C</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+html body * {
+  box-sizing: border-box;
+}
+
+
+
+
+/* Element-level selector */
+/* style every h2 element on the page */
+h2 {
+  font-family: Monospace, sans-serif;
+}
+
+/* class name selector */
+/* style every html element that has
+  the class attribute value of 
+  'title' e.g. <h2 class="title">...</h2>
+ */
+.title {
+  background-color: #8468b9;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Id selector */
+
+#card {
+  border: 2px solid black;
+}

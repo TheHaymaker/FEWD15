@@ -1,0 +1,49 @@
+html body * {
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.row {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row:after {
+  content: "";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  clear: both;
+  -webkit-transform: translate(50px);
+          transform: translate(50px);
+}
+
+.col {
+  width: 25%;
+  float: left;
+  border-right: 10px solid white;
+  padding: 10px;
+}
+
+.col:last-child {
+  border-right: 0px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+

@@ -13,6 +13,23 @@
             margin: 0 auto;
         }
 
+        /*
+            
+            1. Create a flexbox area using the display: flex property
+            2. Add wrap to the flex-flow property and apply fixed widths to your columns
+                - experiement with how the flex area automatically stacks items
+            3. Change the flex-direction to column based on a breakpoint using media queries
+            4. Practice building more complex layouts
+            5. Try changing the order of items by using the row-reverse or column-reverse rules
+            6. Add diverse content to your columns and:
+                - experiment with align-items
+                - experiment with justif-content
+            7. experiment with position relative/absolute with children in a flex-area / flex-item
+            8. Nested flex-areas within flex-items/columns???
+
+         */
+
+
         .row {
             display: flex;
             flex-flow: row wrap;
@@ -59,6 +76,18 @@
 
 <body>
     <div class="wrapper">
+        <div class="row">
+            <div class="col col-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum harum minima libero reiciendis asperiores quasi doloribus. Omnis architecto, accusantium neque animi ipsam reiciendis delectus itaque tempore consequuntur, vel optio eligendi?
+            </div>
+            <div class="col col-2">
+                B
+            </div>
+            <div class="col col-4">
+                C
+            </div>
+
+        </div>
         <div class="row">
             <div class="col col-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum harum minima libero reiciendis asperiores quasi doloribus. Omnis architecto, accusantium neque animi ipsam reiciendis delectus itaque tempore consequuntur, vel optio eligendi?

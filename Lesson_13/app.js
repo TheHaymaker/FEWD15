@@ -6,6 +6,7 @@ var ham = document.querySelector('.hamburger');
 var menu = document.querySelector('.nav_mobile');
 
 ham.addEventListener('click', function(e){
+  
   if(menu.classList.contains('active')) {
     // if the mobile menu has the 'active' class
     // remove it

@@ -59,12 +59,14 @@ html body * {
   top: 0;
   left: 0;
   transition: 0.25s all ease;
-  transform: translate(0px, -134px) skewx(95deg);
+  -webkit-transform: translate(0px, -134px) skewx(95deg);
+          transform: translate(0px, -134px) skewx(95deg);
 }
 
 .nav-items a:hover:after {
   transition: 0.25s all ease;
-  transform: translate(0px, -84px) skewx(0deg);
+  -webkit-transform: translate(0px, -84px) skewx(0deg);
+          transform: translate(0px, -84px) skewx(0deg);
 }
 
 /* Mobile menu */
@@ -79,16 +81,16 @@ html body * {
   width: 100%;
   text-align: center;
   z-index: -1;
-  transform: translate(0%, -100%);
-  -webkit-transition: transform 0.5s ease-in-out;
-     -moz-transition: transform 0.5s ease-in-out;
-      -ms-transition: transform 0.5s ease-in-out;
-       -o-transition: transform 0.5s ease-in-out;
-          transition: transform 0.5s ease-in-out;
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
-
+/*  calc(10px + 50% / 5 )  */
 .nav_mobile.active {
-  transform: translate(0%, calc(0% + 155px) );
+  -webkit-transform: translate(0%, calc(0% + 155px) );
+          transform: translate(0%, calc(0% + 155px) );
 }
 
 .nav_mobile ul {

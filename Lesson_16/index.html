@@ -15,7 +15,7 @@
     <input id="firstNameID" type="text" name="firstName" placeholder="First Name...">
 
     <label for="email">Email:</label>
-    <input id="turtle" type="tel" >
+    <input id="turtle" type="email" pattern="" >
 
     <fieldset>
       <legend>What fruit do you like?</legend>
@@ -38,7 +38,15 @@
 
   <script>
 
-    // honeypot
+    var emailValidation = document.getElementById('turtle');
+
+    emailValidation.addEventListener('input', function(){
+      if(emailValidation.validity.typeMismatch) {
+        emailValidation.setCustomValidity("Leonard");
+      } else {
+        emailValidation.setCustomValidity("");
+      }
+    });
     
   </script>
 </body>

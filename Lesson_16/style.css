@@ -1,0 +1,8 @@
+input:valid {
+  outline: lightgreen auto 5px;
+}
+
+input:invalid {
+  outline: crimson auto 5px;
+}
+

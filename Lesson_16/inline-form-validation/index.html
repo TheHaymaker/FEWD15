@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <h1>Inline Form Validation Example</h1>
+        <!-- 
+            We add the `novalidate` attribute to our form 
+            to disable the native HTML form validation, 
+            so that it doesn't compete with our custom
+            inline validation ...
+        -->
+        <form action="" method="POST" novalidate>
+            <div class="row">
+                <div class="col">
+                    <div class="input">
+                        <label for="fn">First name:</label>
+                        <input id="fn" type="text" name="fn" data-error="Please enter your first name">
+                    </div>
+                    <div class="input">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" data-error="Please enter an email">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input">
+                        <label for="ln">Last name:</label>
+                        <input id="ln" type="text" name="ln" data-error="Enter your last name">
+                    </div>
+
+                    <div class="input">
+                        <label for="tel">Telephone #:</label>
+                        <input id="tel" type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-error="Please enter a phone number following the xxx-xxx-xxxx format">
+                    </div>
+
+                    <button type="submit">Contact Us</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

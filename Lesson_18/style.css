@@ -4,16 +4,29 @@ body {
 }
 
 html body * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+#main {
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+h4 {
+  margin-bottom: 5px;
 }
 
 .wrapper {
   background: #c5c5c5;
+  -webkit-box-shadow: 0px 15px 20px -18px black;
   box-shadow: 0px 15px 20px -18px black;
   position: relative;
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
   margin-bottom: 0px;
   margin-bottom: 50px;
   min-height: 100px;
@@ -25,11 +38,14 @@ html body * {
   height: 50px;
   width: 50px;
   background-color: darkred;
+  -webkit-box-shadow: 0px 15px 15px -18px black;
   box-shadow: 0px 15px 15px -18px black;
+  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 .box-chained {
+  -webkit-transition: 0.5s width ease, 0.5s height ease 0.5s;
   transition: 0.5s width ease, 0.5s height ease 0.5s;
 }
 
@@ -39,15 +55,25 @@ html body * {
 }
 
 .box-animated {
+  -webkit-animation: 5s expand-thyself ease-in-out 2 alternate;
   animation: 5s expand-thyself ease-in-out 2 alternate;
 }
 
 .box-animated-step {
+  -webkit-animation: 5s expand-thyself steps(15) infinite alternate;
   animation: 5s expand-thyself steps(15) infinite alternate;
 }
 
 .box-animated-listener.active {
+  -webkit-animation: 5s expand-thyself steps(15) 1 alternate;
   animation: 5s expand-thyself steps(15) 1 alternate;
+}
+
+@-webkit-keyframes expand-thyself {
+  50% {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @keyframes expand-thyself {

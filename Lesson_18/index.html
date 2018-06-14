@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS Transitions &amp; Animations</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="box box-transition"></div>
-    </div>
-    <div class="wrapper">
-        <div class="box box-transition box-chained"></div>
-    </div>
-    <div class="wrapper">
-        <div class="box box-animated"></div>
-    </div>
-    <div class="wrapper">
-        <div class="box box-animated box-animated-step"></div>
-    </div>
-    <div class="wrapper">
-        <div class="box box-animated-listener"></div>
+    <div id="main">
+        <h4>Simple Transition on Hover</h4>
+        <div class="wrapper">
+            <div class="box box-transition"></div>
+        </div>
+        <h4>Chained Transition on Hover</h4>
+        <div class="wrapper">
+            <div class="box box-transition box-chained"></div>
+        </div>
+        <h4>Keyframes Animation Fixed Number of Iterations</h4>
+        <div class="wrapper">
+            <div class="box box-animated"></div>
+        </div>
+        <h4>Keyframes Animation Using steps() Easing Function</h4>
+        <div class="wrapper">
+            <div class="box box-animated box-animated-step"></div>
+        </div>
+        <h4>Keyframes Animation Triggered by mouseenter / animationend events</h4>
+        <div class="wrapper">
+            <div class="box box-animated-listener"></div>
+        </div>
     </div>
 
     <script src="app.js"></script>

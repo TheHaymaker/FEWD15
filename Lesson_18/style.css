@@ -46,7 +46,7 @@ h4 {
 
 .box-chained {
   -webkit-transition: 0.5s width ease, 0.5s height ease 0.5s;
-  transition: 0.5s width ease, 0.5s height ease 0.5s;
+  transition: 0.25s width ease, 0.75s height ease 0.5s;
 }
 
 .box-transition:hover {
@@ -77,8 +77,12 @@ h4 {
 }
 
 @keyframes expand-thyself {
+  0% {
+  }
   50% {
     height: 100%;
     width: 100%;
+  }
+  100% {
   }
 }
